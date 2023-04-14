@@ -1,0 +1,7 @@
+编号,用例名称,请求方式,headers,url,请求参数,预期结果,备注,
+1,新增WEB端应用,post,{},/o/krum_saas/api/v1/krum/application/,"{""application_type"":""web"",""application_name"":""#应用名称"",""relation_apm"":True}",,,
+2,查询应用列表,get,{},/o/krum_saas/api/v1/krum/application/?application_type=web&page=1&size=24,{},,,
+3,获取探针代码,get,{},/o/krum_saas/api/v1/krum/application/#应用id/?query=js_link_info%2Ctoken,{},,,
+4,上传反混淆文件,post,{},/o/krum_saas/api/v1/krum/application/#应用id/confoundfile/?application_name=#应用名称,{},,,
+5,完成探针接入,patch,{},/o/krum_saas/api/v1/krum/application/#应用id/?application_name=#应用名称,"{ ""application_name"": ""#应用名称"",""collect_status"": true,""status"": true}",,,
+6,删除应用,delete,{},/o/krum_saas/api/v1/krum/application/#应用id/?application_name=#应用名称,{},,,
